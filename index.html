@@ -6,6 +6,12 @@
     <title>4Life Transfer Factor Plus | Inmunidad Avanzada</title>
     <meta name="description" content="Fortalece tu sistema inmunológico con 4Life Transfer Factor Plus Tri-Factor Formula. Respaldo científico y bienestar integral.">
     
+    <!-- Preconnect para acelerar la carga de recursos externos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="preconnect" href="https://www.sotcarga.com">
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -196,9 +202,9 @@
             
             <div class="mt-8 flex items-center gap-3 md:gap-4 text-xs sm:text-sm text-gray-400">
                 <div class="flex -space-x-2 shrink-0">
-                    <img class="w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-darkblue" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=64&h=64" alt="User" onerror="this.style.display='none'">
-                    <img class="w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-darkblue" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=64&h=64" alt="User" onerror="this.style.display='none'">
-                    <img class="w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-darkblue" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=64&h=64" alt="User" onerror="this.style.display='none'">
+                    <img class="w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-darkblue" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=64&h=64" alt="User" loading="lazy" onerror="this.style.display='none'">
+                    <img class="w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-darkblue" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=64&h=64" alt="User" loading="lazy" onerror="this.style.display='none'">
+                    <img class="w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-darkblue" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=64&h=64" alt="User" loading="lazy" onerror="this.style.display='none'">
                 </div>
                 <p>Únete a miles protegiendo su bienestar.</p>
             </div>
@@ -207,8 +213,8 @@
         <div class="w-full lg:w-1/2 relative animate-float flex justify-center mt-10 lg:mt-0">
             <!-- Decorative circle behind product -->
             <div class="absolute inset-0 bg-gradient-to-tr from-electric/40 to-transparent rounded-full filter blur-xl md:blur-2xl transform scale-75"></div>
-            <!-- New Product Image 3D (Adaptado móvil: 85%, Desktop: 60%) -->
-            <img id="hero-product-image" src="https://www.sotcarga.com/downloads/kaivie%20productos/4life1.png" alt="4Life Transfer Factor Plus Tri-Factor Formula" class="relative z-10 w-[85%] lg:w-[60%] object-contain drop-shadow-[0_0_40px_rgba(29,78,216,0.5)] hover:scale-105 transition-transform duration-500">
+            <!-- New Product Image 3D (Carga Inmediata y Prioritaria) -->
+            <img id="hero-product-image" src="https://www.sotcarga.com/downloads/kaivie%20productos/4life1.png" alt="4Life Transfer Factor Plus Tri-Factor Formula" fetchpriority="high" class="relative z-10 w-[85%] lg:w-[60%] object-contain drop-shadow-[0_0_40px_rgba(29,78,216,0.5)] hover:scale-105 transition-transform duration-500">
         </div>
     </header>
 
@@ -224,14 +230,14 @@
             <div class="relative aspect-video rounded-xl md:rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-black w-full">
                 <!-- Portada y Botón de Play Personalizado -->
                 <div id="video-overlay" class="absolute inset-0 z-20 flex items-center justify-center cursor-pointer group" onclick="document.getElementById('promo-video').play(); this.style.display='none';">
-                    <img src="https://www.sotcarga.com/downloads/kaivie%20productos/fit.png" alt="Portada Video Gimnasio" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500">
+                    <img src="https://www.sotcarga.com/downloads/kaivie%20productos/fit.png" alt="Portada Video Gimnasio" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500">
                     <div class="relative z-30 w-16 h-16 md:w-24 md:h-24 bg-electric/80 rounded-full flex items-center justify-center backdrop-blur-md border border-white/20 group-hover:scale-110 group-hover:bg-blue-600 transition-all duration-300 shadow-[0_0_30px_rgba(29,78,216,0.8)]">
                         <svg class="w-8 h-8 md:w-12 md:h-12 text-white fill-current ml-1 md:ml-2" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
                     </div>
                 </div>
                 
-                <!-- Video Player -->
-                <video id="promo-video" controls playsinline class="w-full h-full object-cover relative z-10">
+                <!-- Video Player (No precarga datos pesados hasta dar click) -->
+                <video id="promo-video" controls playsinline preload="none" class="w-full h-full object-cover relative z-10">
                     <source src="https://www.sotcarga.com/downloads/kaivie%20productos/factransferkaivie.mp4" type="video/mp4">
                     Tu navegador no soporta el elemento de video.
                 </video>
@@ -442,8 +448,8 @@
                     </ul>
                 </div>
                 <div class="w-full lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
-                    <img src="https://www.sotcarga.com/downloads/kaivie%20productos/adultos.png" alt="Ciencia y Salud" class="rounded-xl md:rounded-2xl border border-white/10 opacity-80 hover:opacity-100 transition-opacity object-cover h-48 sm:h-64 w-full shadow-[0_0_20px_rgba(29,78,216,0.2)]">
-                    <img src="https://www.sotcarga.com/downloads/kaivie%20productos/familia.png" alt="Bienestar en Familia" class="rounded-xl md:rounded-2xl border border-white/10 opacity-80 hover:opacity-100 transition-opacity object-cover h-48 sm:h-64 w-full shadow-[0_0_20px_rgba(29,78,216,0.2)]">
+                    <img src="https://www.sotcarga.com/downloads/kaivie%20productos/adultos.png" alt="Ciencia y Salud" loading="lazy" decoding="async" class="rounded-xl md:rounded-2xl border border-white/10 opacity-80 hover:opacity-100 transition-opacity object-cover h-48 sm:h-64 w-full shadow-[0_0_20px_rgba(29,78,216,0.2)]">
+                    <img src="https://www.sotcarga.com/downloads/kaivie%20productos/familia.png" alt="Bienestar en Familia" loading="lazy" decoding="async" class="rounded-xl md:rounded-2xl border border-white/10 opacity-80 hover:opacity-100 transition-opacity object-cover h-48 sm:h-64 w-full shadow-[0_0_20px_rgba(29,78,216,0.2)]">
                 </div>
             </div>
         </div>
